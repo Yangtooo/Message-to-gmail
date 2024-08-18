@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Working Contact Form To Email</title>
+</head>
+<body>
+    <section class="contact">
+        <h2>聯絡我</h2>
+
+        <form action="#">
+            <div class="input-box">
+                <!-- input-field field用於包裹更具體的輸入框 -->
+                <div class="input-field field">
+                    <input type="text" placeholder="姓名" id="name" class="item" autocomplete="off">
+                    <!-- 增加錯誤提示 -->
+                    <div class="error-txt">姓名輸入不可空白</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="個人信箱" id="email" class="item" autocomplete="off">
+                    <!-- 增加錯誤提示 -->
+                    <div class="error-txt email">信箱輸入不可空白</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="電話號碼" id="phone" class="item" autocomplete="off">
+                    <!-- 增加錯誤提示 -->
+                    <div class="error-txt">電話號碼輸入不可空白</div>
+                </div>
+
+                <div class="input-field field">
+                    <input type="text" placeholder="主旨" id="subject" class="item" autocomplete="off">
+                    <!-- 增加錯誤提示 -->
+                    <div class="error-txt">主旨輸入不可空白</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="30" rows="10" placeholder="輸入訊息" class="item" autocomplete="off"></textarea>
+                <!-- 增加錯誤提示 -->
+                <div class="error-txt">訊息輸入不可空白</div>
+            </div>
+        
+            <button type="submit">送出</button>
+        
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- 匯入甜蜜的提醒套件 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
